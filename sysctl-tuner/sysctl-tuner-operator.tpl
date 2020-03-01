@@ -59,6 +59,10 @@ spec:
     image: %IMAGE%
     imagePullPolicy: Always
     env:
+      - name: ADDON_OPERATOR_NAMESPACE
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.namespace
       - name: RLOG_LOG_LEVEL
         value: DEBUG
   serviceAccountName: sysctl-tuner-account
