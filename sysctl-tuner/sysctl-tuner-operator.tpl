@@ -45,7 +45,7 @@ data:
   sysctlTunerEnabled: "true"
   sysctlTuner: |
     params:
-      net.ipv4.tcp_timestamps: "0"
+      vm.max_map_count: "262144"
     sleep: "300"
 
 ---
